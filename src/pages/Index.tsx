@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import DriveThru from "@/components/DriveThru";
 import ProductCategories from "@/components/ProductCategories";
 import About from "@/components/About";
 import Location from "@/components/Location";
@@ -11,6 +12,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <DriveThru />
         <ProductCategories />
         <About />
         <Location />
@@ -22,41 +24,61 @@ const Index = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LiquorStore",
-          "name": "A1 Plaza Liquors and Wine",
-          "description": "Premium liquor store in Waldorf, Maryland offering liquor, wine, beer, tobacco, and vape products",
+          "name": "A1 Plaza Liquors and Wines",
+          "image": "https://a1plazaliquors.com/images/store-front.jpg",
+          "description": "A liquor store in Waldorf with a drive-thru liquor window, cold beer, wine, tequila, whiskey, vodka, rum, mixers, snacks, tobacco, vape and lottery. Easy parking at 3215 Plaza Way.",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "A1 Plaza",
+            "streetAddress": "3215 Plaza Way",
             "addressLocality": "Waldorf",
             "addressRegion": "MD",
-            "postalCode": "20601",
+            "postalCode": "20603",
             "addressCountry": "US"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "38.6312",
-            "longitude": "-76.9394"
+            "latitude": "38.6120838",
+            "longitude": "-76.9262364"
           },
           "url": "https://a1plazaliquors.com",
-          "telephone": "(301)XXX-XXXX",
+          "telephone": "+1-240-607-2336",
           "priceRange": "$$",
+          "paymentAccepted": "Cash, Credit Card, Debit Card, NFC Mobile Payments",
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Drive-thru service"
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Cold beer"
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Parking lot"
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Self-serve lottery machine"
+            }
+          ],
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-              "opens": "09:00",
+              "opens": "10:00",
               "closes": "22:00"
             },
             {
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Friday", "Saturday"],
-              "opens": "09:00",
+              "opens": "10:00",
               "closes": "23:00"
             },
             {
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": "Sunday",
-              "opens": "10:00",
+              "opens": "11:00",
               "closes": "21:00"
             }
           ],
