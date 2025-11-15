@@ -46,7 +46,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                <a href={STORE_PHONE_URI} onClick={() => dialStorePhone()} className="hover:text-primary transition-colors">
+                <a href={STORE_PHONE_URI} className="hover:text-primary transition-colors">
                   {STORE_PHONE_DISPLAY}
                 </a>
               </li>
