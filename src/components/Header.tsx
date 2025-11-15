@@ -46,7 +46,7 @@ const Header = () => {
               className="w-full justify-center gap-2 shadow-md sm:w-auto"
               asChild
             >
-              <a href={STORE_PHONE_URI} onClick={() => dialStorePhone()}>
+              <a href={STORE_PHONE_URI}>
                 <Phone className="h-4 w-4" aria-hidden="true" />
                 <span>{STORE_PHONE_DISPLAY}</span>
               </a>
