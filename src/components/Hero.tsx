@@ -1,7 +1,27 @@
 import { Car } from "lucide-react";
-import heroImage from "@/assets/hero-liquor.jpg";
+import { useState, useEffect } from "react";
+import storefrontImage from "@/assets/a1-plaza-liquors-storefront-waldorf-md.jpg";
+import counterImage from "@/assets/a1-plaza-liquors-counter-lottery-waldorf.jpg";
+import beerCoolerImage from "@/assets/a1-plaza-liquors-beer-cooler-selection.jpg";
+import wineAisleImage from "@/assets/a1-plaza-liquors-wine-aisle-waldorf.jpg";
 
 const Hero = () => {
+  const interiorImages = [
+    { src: counterImage, alt: "A1 Plaza Liquors checkout counter with lottery machine in Waldorf MD" },
+    { src: beerCoolerImage, alt: "Cold beer and seltzer selection at A1 Plaza Liquors Waldorf" },
+    { src: wineAisleImage, alt: "Wine aisle with red, white, and sparkling wines at A1 Plaza Liquors" }
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % interiorImages.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [interiorImages.length]);
+
   return (
     <section className="bg-background py-16 sm:py-20">
       <div className="container">
@@ -30,16 +50,16 @@ const Hero = () => {
           <div className="w-full lg:flex-1 flex flex-col gap-6">
             <div className="relative w-full aspect-[4/3] max-w-2xl mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-border/60">
               <img
-                src={heroImage}
-                alt="Interior of A1 Plaza Liquors & Wines"
+                src={storefrontImage}
+                alt="A1 Plaza Liquors and Wines storefront at 3215 Plaza Way Waldorf MD with drive-thru service"
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="relative w-full aspect-[4/3] max-w-2xl mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-border/60">
               <img
-                src={heroImage}
-                alt="A selection of spirits at A1 Plaza Liquors & Wines"
-                className="h-full w-full object-cover"
+                src={interiorImages[currentImageIndex].src}
+                alt={interiorImages[currentImageIndex].alt}
+                className="h-full w-full object-cover transition-opacity duration-500"
               />
             </div>
           </div>
