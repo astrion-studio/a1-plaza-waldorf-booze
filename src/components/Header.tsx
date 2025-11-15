@@ -1,20 +1,32 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 
+const STORE_NAME = "A1 Plaza Liquors & Wines";
+const STORE_ADDRESS = "3215 Plaza Way, Waldorf, MD 20603";
+const PHONE_NUMBER_RAW = "+12406072336";
+const PHONE_NUMBER_DISPLAY = "(240) 607-2336";
+const STORE_HOURS = [
+  { days: "Mon–Thu", hours: "10:00am – 10:00pm" },
+  { days: "Fri–Sat", hours: "10:00am – 11:00pm" },
+  { days: "Sun", hours: "11:00am – 9:00pm" },
+];
+
+const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  `${STORE_NAME} ${STORE_ADDRESS}`,
+)}`;
+
 const Header = () => {
-  const googleMapsUrl =
-    "https://www.google.com/maps/search/?api=1&query=A1+Plaza+Liquors+and+Wines+Waldorf+MD";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
-      <div className="container flex flex-col gap-4 py-4 md:h-20 md:flex-row md:items-center md:justify-between">
+      <div className="container flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
         <div className="flex items-start gap-3 md:flex-1">
           <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-md">
             A1
           </div>
           <div className="leading-tight">
-            <h1 className="text-xl font-bold text-foreground">A1 Plaza Liquors & Wines</h1>
-            <span className="text-sm text-muted-foreground">3215 Plaza Way, Waldorf, MD 20603</span>
+            <h1 className="text-xl font-bold text-foreground">{STORE_NAME}</h1>
+            <span className="text-sm text-muted-foreground">{STORE_ADDRESS}</span>
           </div>
         </div>
 
@@ -40,9 +52,9 @@ const Header = () => {
               <span className="font-medium">Store Hours</span>
             </div>
             <div className="space-y-0.5 leading-tight md:space-y-0">
-              <p>Mon–Thu 10:00am – 10:00pm</p>
-              <p>Fri–Sat 10:00am – 11:00pm</p>
-              <p>Sun 11:00am – 9:00pm</p>
+              {STORE_HOURS.map(({ days, hours }) => (
+                <p key={days}>{`${days} ${hours}`}</p>
+              ))}
             </div>
           </div>
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center md:justify-end">
@@ -53,7 +65,7 @@ const Header = () => {
               asChild
             >
               <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
-                <MapPin className="h-4 w-4" />
+                <MapPin className="h-4 w-4" aria-hidden="true" />
                 <span>Get Directions</span>
               </a>
             </Button>
@@ -63,9 +75,9 @@ const Header = () => {
               className="w-full justify-center gap-2 shadow-md sm:w-auto"
               asChild
             >
-              <a href="tel:+12406072336">
-                <Phone className="h-4 w-4" />
-                <span>(240) 607-2336</span>
+              <a href={`tel:${PHONE_NUMBER_RAW}`}>
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                <span>{PHONE_NUMBER_DISPLAY}</span>
               </a>
             </Button>
           </div>
