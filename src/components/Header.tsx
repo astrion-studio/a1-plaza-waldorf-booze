@@ -52,7 +52,7 @@ const Header = () => {
               <span className="font-medium">Store Hours</span>
             </div>
             <div className="space-y-0.5 leading-tight md:space-y-0">
-              {storeHours.map(({ days, hours }) => (
+              {STORE_HOURS.map(({ days, hours }) => (
                 <p key={days}>{`${days} ${hours}`}</p>
               ))}
             </div>
