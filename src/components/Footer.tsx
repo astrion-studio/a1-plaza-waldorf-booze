@@ -1,5 +1,5 @@
 import { MapPin, Phone, Clock } from "lucide-react";
-import { STORE_PHONE_DISPLAY, STORE_PHONE_URI, dialStorePhone } from "@/lib/contact";
+import { STORE_PHONE_DISPLAY, STORE_PHONE_URI } from "@/lib/contact";
 
 const Footer = () => {
   return (
