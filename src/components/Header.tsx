@@ -1,6 +1,6 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import { Button } from "./ui/button";
-import { STORE_PHONE_DISPLAY, STORE_PHONE_URI, dialStorePhone } from "@/lib/contact";
+import { STORE_PHONE_DISPLAY, STORE_PHONE_URI } from "@/lib/contact";
 
 const STORE_NAME = "A1 Plaza Liquors & Wines";
 const STORE_ADDRESS = "3215 Plaza Way, Waldorf, MD 20603";
