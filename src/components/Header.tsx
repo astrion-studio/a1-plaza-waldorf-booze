@@ -1,4 +1,5 @@
 import { Clock, MapPin, Phone } from "lucide-react";
+import { GOOGLE_MAPS_URL, PHONE_NUMBER_DISPLAY, PHONE_NUMBER_RAW, STORE_ADDRESS, STORE_HOURS, STORE_NAME } from "../lib/store";
 import { Button } from "./ui/button";
 
 const STORE_NAME = "A1 Plaza Liquors & Wines";
@@ -52,7 +53,7 @@ const Header = () => {
               <span className="font-medium">Store Hours</span>
             </div>
             <div className="space-y-0.5 leading-tight md:space-y-0">
-              {storeHours.map(({ days, hours }) => (
+              {STORE_HOURS.map(({ days, hours }) => (
                 <p key={days}>{`${days} ${hours}`}</p>
               ))}
             </div>
@@ -64,7 +65,7 @@ const Header = () => {
               className="w-full justify-center gap-2 shadow-sm sm:w-auto"
               asChild
             >
-              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
+              <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer">
                 <MapPin className="h-4 w-4" aria-hidden="true" />
                 <span>Get Directions</span>
               </a>
