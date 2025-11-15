@@ -27,19 +27,19 @@ const Hero = () => {
 
           </div>
 
-          <div className="w-full lg:flex-1 space-y-6">
-            <div className="relative w-full max-w-2xl mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-border/60">
+          <div className="w-full lg:flex-1 flex flex-col gap-6">
+            <div className="relative w-full aspect-[4/3] max-w-2xl mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-border/60">
               <img
                 src={heroImage}
                 alt="Interior of A1 Plaza Liquors & Wines"
-                className="h-full w-full max-h-[340px] sm:max-h-[380px] lg:max-h-[440px] object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
-            <div className="relative w-full max-w-2xl mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-border/60">
+            <div className="relative w-full aspect-[4/3] max-w-2xl mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-border/60">
               <img
                 src={heroImage}
                 alt="A selection of spirits at A1 Plaza Liquors & Wines"
-                className="h-full w-full max-h-[340px] sm:max-h-[380px] lg:max-h-[440px] object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
