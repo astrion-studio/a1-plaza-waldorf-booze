@@ -16,7 +16,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Waldorf's liquor store with drive-thru, cold beer, wine, spirits, lottery, tobacco and vape. Serving the community with quality products.
+              Waldorf's woman- and minority-owned liquor store with drive-thru, cold beer, wine, spirits, lottery, bitcoin machine, ATM, tobacco and vape. Serving the community with quality products for 25+ years in Charles County Plaza Shopping Center.
             </p>
           </div>
           
