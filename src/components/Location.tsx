@@ -1,6 +1,7 @@
 import { MapPin, Phone, Clock } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
+import { STORE_PHONE_DISPLAY, STORE_PHONE_URI } from "@/lib/contact";
 
 const Location = () => {
   return (
@@ -25,7 +26,11 @@ const Location = () => {
                 Waldorf, MD 20603
               </p>
               <Button variant="outline" size="lg" className="w-full" asChild>
-                <a href="https://www.google.com/maps/search/?api=1&query=A1+Plaza+Liquors+and+Wines+Waldorf+MD" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=A1+Plaza+Liquors+and+Wines+Waldorf+MD"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Get Directions
                 </a>
               </Button>
@@ -43,8 +48,8 @@ const Location = () => {
                 availability & questions
               </p>
               <Button variant="outline" size="lg" className="w-full" asChild>
-                <a href="tel:+12406072336">
-                  (240) 607-2336
+                <a href={STORE_PHONE_URI}>
+                  {STORE_PHONE_DISPLAY}
                 </a>
               </Button>
             </CardContent>

@@ -1,4 +1,5 @@
 import { MapPin, Phone, Clock } from "lucide-react";
+import { STORE_PHONE_DISPLAY, STORE_PHONE_URI } from "@/lib/contact";
 
 const Footer = () => {
   return (
@@ -34,14 +35,19 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                <a href="https://www.google.com/maps/search/?api=1&query=A1+Plaza+Liquors+and+Wines+Waldorf+MD" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=A1+Plaza+Liquors+and+Wines+Waldorf+MD"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
                   3215 Plaza Way, Waldorf, MD 20603
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                <a href="tel:+12406072336" className="hover:text-primary transition-colors">
-                  (240) 607-2336
+                <a href={STORE_PHONE_URI} className="hover:text-primary transition-colors">
+                  {STORE_PHONE_DISPLAY}
                 </a>
               </li>
               <li className="flex items-start gap-2">

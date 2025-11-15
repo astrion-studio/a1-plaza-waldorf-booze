@@ -1,10 +1,9 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import { Button } from "./ui/button";
+import { STORE_PHONE_DISPLAY, STORE_PHONE_URI } from "@/lib/contact";
 
 const STORE_NAME = "A1 Plaza Liquors & Wines";
 const STORE_ADDRESS = "3215 Plaza Way, Waldorf, MD 20603";
-const PHONE_NUMBER_RAW = "+12406072336";
-const PHONE_NUMBER_DISPLAY = "(240) 607-2336";
 const STORE_HOURS = [
   { days: "Mon–Thu", hours: "10:00am – 10:00pm" },
   { days: "Fri–Sat", hours: "10:00am – 11:00pm" },
@@ -47,9 +46,9 @@ const Header = () => {
               className="w-full justify-center gap-2 shadow-md sm:w-auto"
               asChild
             >
-              <a href={`tel:${PHONE_NUMBER_RAW}`}>
+              <a href={STORE_PHONE_URI}>
                 <Phone className="h-4 w-4" aria-hidden="true" />
-                <span>{PHONE_NUMBER_DISPLAY}</span>
+                <span>{STORE_PHONE_DISPLAY}</span>
               </a>
             </Button>
           </div>
