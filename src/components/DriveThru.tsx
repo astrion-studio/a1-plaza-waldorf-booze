@@ -3,10 +3,10 @@ import { Card, CardContent } from "./ui/card";
 
 const DriveThru = () => {
   return (
-    <section id="drive-thru" className="py-20 bg-gradient-to-b from-muted/30 to-background">
+    <section id="drive-thru" className="py-20 bg-muted/20">
       <div className="container">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 border border-secondary/30 text-sm font-medium text-foreground mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-sm font-medium text-foreground mb-4">
             <Car className="h-4 w-4 text-secondary" />
             <span>Exclusive Feature</span>
           </div>
@@ -19,9 +19,9 @@ const DriveThru = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          <Card className="border-2 hover:border-primary transition-all hover:shadow-xl">
+          <Card className="border transition-all">
             <CardContent className="p-6 text-center space-y-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mx-auto">
                 <Zap className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Quick Service</h3>
@@ -31,10 +31,10 @@ const DriveThru = () => {
             </CardContent>
           </Card>
           
-          <Card className="border-2 hover:border-primary transition-all hover:shadow-xl">
+          <Card className="border transition-all">
             <CardContent className="p-6 text-center space-y-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/10 flex items-center justify-center mx-auto">
-                <ShoppingBag className="h-8 w-8 text-secondary" />
+              <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mx-auto">
+                <ShoppingBag className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Full Selection</h3>
               <p className="text-muted-foreground text-sm">
@@ -43,9 +43,9 @@ const DriveThru = () => {
             </CardContent>
           </Card>
           
-          <Card className="border-2 hover:border-primary transition-all hover:shadow-xl">
+          <Card className="border transition-all">
             <CardContent className="p-6 text-center space-y-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mx-auto">
                 <Clock className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Convenient Hours</h3>
@@ -55,10 +55,10 @@ const DriveThru = () => {
             </CardContent>
           </Card>
           
-          <Card className="border-2 hover:border-primary transition-all hover:shadow-xl">
+          <Card className="border transition-all">
             <CardContent className="p-6 text-center space-y-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/10 flex items-center justify-center mx-auto">
-                <Car className="h-8 w-8 text-secondary" />
+              <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mx-auto">
+                <Car className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold">Easy Parking</h3>
               <p className="text-muted-foreground text-sm">

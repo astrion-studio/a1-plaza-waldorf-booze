@@ -62,7 +62,7 @@ const categories = [
 
 const ProductCategories = () => {
   return (
-    <section id="products" className="py-20 bg-muted/30">
+    <section id="products" className="py-20 bg-muted/20">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">What We Carry</h2>
@@ -75,9 +75,9 @@ const ProductCategories = () => {
           {categories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <Card key={index} className="border-2 hover:border-primary transition-all hover:shadow-xl group">
+              <Card key={index} className="border transition-all">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center">
                     <Icon className="h-7 w-7 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold">{category.title}</h3>

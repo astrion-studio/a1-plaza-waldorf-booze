@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const Location = () => {
   return (
-    <section id="location" className="py-20 bg-muted/30">
+    <section id="location" className="py-20 bg-muted/20">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Visit Us in Waldorf</h2>
@@ -14,9 +14,9 @@ const Location = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-          <Card className="border-2 hover:border-primary transition-all hover:shadow-xl">
+          <Card className="border transition-all">
             <CardContent className="p-8 text-center space-y-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mx-auto">
                 <MapPin className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold">Address</h3>
@@ -24,45 +24,35 @@ const Location = () => {
                 3215 Plaza Way<br />
                 Waldorf, MD 20603
               </p>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="w-full shadow-md hover:shadow-lg"
-                asChild
-              >
+              <Button variant="outline" size="lg" className="w-full" asChild>
                 <a href="https://www.google.com/maps/search/?api=1&query=A1+Plaza+Liquors+and+Wines+Waldorf+MD" target="_blank" rel="noopener noreferrer">
                   Get Directions
                 </a>
               </Button>
             </CardContent>
           </Card>
-          
-          <Card className="border-2 hover:border-primary transition-all hover:shadow-xl">
+
+          <Card className="border transition-all">
             <CardContent className="p-8 text-center space-y-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/10 flex items-center justify-center mx-auto">
-                <Phone className="h-8 w-8 text-secondary" />
+              <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mx-auto">
+                <Phone className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold">Phone</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Call us for product<br />
                 availability & questions
               </p>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="w-full shadow-md hover:shadow-lg"
-                asChild
-              >
+              <Button variant="outline" size="lg" className="w-full" asChild>
                 <a href="tel:+12406072336">
                   (240) 607-2336
                 </a>
               </Button>
             </CardContent>
           </Card>
-          
-          <Card className="border-2 hover:border-primary transition-all hover:shadow-xl">
+
+          <Card className="border transition-all">
             <CardContent className="p-8 text-center space-y-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mx-auto">
+              <div className="w-16 h-16 rounded-2xl bg-muted flex items-center justify-center mx-auto">
                 <Clock className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold">Hours</h3>
@@ -75,7 +65,7 @@ const Location = () => {
           </Card>
         </div>
         
-        <div className="mt-12 aspect-video max-w-5xl mx-auto rounded-2xl overflow-hidden border-2 shadow-xl">
+        <div className="mt-12 aspect-video max-w-5xl mx-auto rounded-2xl overflow-hidden border">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.8745423!2d-76.9284251!3d38.6120838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7339f8a8e8f8f%3A0x8f8f8f8f8f8f8f8f!2s3215%20Plaza%20Way%2C%20Waldorf%2C%20MD%2020603!5e0!3m2!1sen!2sus!4v1234567890"
             width="100%"

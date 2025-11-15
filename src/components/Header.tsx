@@ -16,13 +16,12 @@ const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeU
 )}`;
 
 const Header = () => {
-
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
-      <div className="container flex flex-col gap-4 py-4 md:flex-row md:items-start md:justify-between">
-        <div className="flex flex-col gap-3 md:flex-1">
+      <div className="container flex flex-col gap-4 py-4 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-6">
+        <div className="flex flex-col gap-3 md:justify-self-start">
           <div className="flex items-start gap-3">
-            <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-md">
+            <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
               A1
             </div>
             <div className="leading-tight">
@@ -56,7 +55,7 @@ const Header = () => {
           </div>
         </div>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 md:flex md:justify-center md:justify-self-center">
           <a href="#products" className="text-sm font-medium transition-colors hover:text-primary">
             Products
           </a>
@@ -71,18 +70,18 @@ const Header = () => {
           </a>
         </nav>
 
-          <div className="flex w-full flex-col gap-1 text-xs text-muted-foreground md:w-auto md:items-end md:text-right md:text-sm">
-            <div className="flex items-center gap-2 text-foreground md:justify-end">
-              <Clock className="h-4 w-4" aria-hidden="true" />
-              <span className="font-medium">Store Hours</span>
-            </div>
-            <div className="space-y-0.5 leading-tight md:space-y-0">
-              {STORE_HOURS.map(({ days, hours }) => (
-                <p key={days}>{`${days} ${hours}`}</p>
-              ))}
-            </div>
+        <div className="flex w-full flex-col gap-1 text-xs text-muted-foreground md:items-end md:justify-self-end md:text-right md:text-sm">
+          <div className="flex items-center gap-2 text-foreground md:justify-end">
+            <Clock className="h-4 w-4" aria-hidden="true" />
+            <span className="font-medium">Store Hours</span>
+          </div>
+          <div className="space-y-0.5 leading-tight md:space-y-0">
+            {STORE_HOURS.map(({ days, hours }) => (
+              <p key={days}>{`${days} ${hours}`}</p>
+            ))}
           </div>
         </div>
+      </div>
     </header>
   );
 };
