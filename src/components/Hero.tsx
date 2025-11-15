@@ -1,5 +1,4 @@
-import { Button } from "./ui/button";
-import { MapPin, Phone, Car } from "lucide-react";
+import { Car } from "lucide-react";
 import heroImage from "@/assets/hero-liquor.jpg";
 
 const Hero = () => {
@@ -25,36 +24,20 @@ const Hero = () => {
               A1 Plaza Liquors & Wines offers a drive-thru liquor window, cold beer, wine, tequila, whiskey, vodka, rum, mixers, snacks, tobacco, vape and self-serve lottery machine at 3215 Plaza Way.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button
-                size="lg"
-                className="text-lg shadow-lg hover:shadow-xl transition-all"
-                asChild
-              >
-                <a href="tel:+12406072336">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call now
-                </a>
-              </Button>
-            </div>
-
-            <div className="pt-6 flex flex-wrap items-center gap-6 text-sm text-foreground">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-primary" />
-                <span className="font-medium">3215 Plaza Way, Waldorf, MD 20603</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-primary" />
-                <span className="font-medium">(240) 607-2336</span>
-              </div>
-            </div>
           </div>
 
-          <div className="w-full lg:flex-1">
+          <div className="w-full lg:flex-1 space-y-6">
             <div className="relative w-full max-w-2xl mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-border/60 shadow-2xl">
               <img
                 src={heroImage}
                 alt="Interior of A1 Plaza Liquors & Wines"
+                className="h-full w-full max-h-[340px] sm:max-h-[380px] lg:max-h-[440px] object-cover"
+              />
+            </div>
+            <div className="relative w-full max-w-2xl mx-auto lg:max-w-none rounded-3xl overflow-hidden border border-border/60 shadow-2xl">
+              <img
+                src={heroImage}
+                alt="A selection of spirits at A1 Plaza Liquors & Wines"
                 className="h-full w-full max-h-[340px] sm:max-h-[380px] lg:max-h-[440px] object-cover"
               />
             </div>
