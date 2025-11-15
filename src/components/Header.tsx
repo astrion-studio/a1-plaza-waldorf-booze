@@ -53,7 +53,7 @@ const Header = () => {
               asChild
             >
               <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
-                <MapPin className="h-4 w-4" />
+                <MapPin className="h-4 w-4" aria-hidden="true" />
                 <span>Get Directions</span>
               </a>
             </Button>
