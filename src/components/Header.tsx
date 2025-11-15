@@ -40,9 +40,9 @@ const Header = () => {
               <span className="font-medium">Store Hours</span>
             </div>
             <div className="space-y-0.5 leading-tight md:space-y-0">
-              <p>Mon–Thu 10:00am – 10:00pm</p>
-              <p>Fri–Sat 10:00am – 11:00pm</p>
-              <p>Sun 11:00am – 9:00pm</p>
+              {storeHours.map(({ days, hours }) => (
+                <p key={days}>{`${days} ${hours}`}</p>
+              ))}
             </div>
           </div>
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center md:justify-end">
