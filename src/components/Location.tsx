@@ -48,7 +48,7 @@ const Location = () => {
                 availability & questions
               </p>
               <Button variant="outline" size="lg" className="w-full" asChild>
-                <a href={STORE_PHONE_URI} onClick={() => dialStorePhone()}>
+                <a href={STORE_PHONE_URI}>
                   {STORE_PHONE_DISPLAY}
                 </a>
               </Button>
