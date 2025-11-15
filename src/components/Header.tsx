@@ -4,8 +4,6 @@ import { Button } from "./ui/button";
 
 const STORE_NAME = "A1 Plaza Liquors & Wines";
 const STORE_ADDRESS = "3215 Plaza Way, Waldorf, MD 20603";
-const PHONE_NUMBER_RAW = "+12406072336";
-const PHONE_NUMBER_DISPLAY = "(240) 607-2336";
 const STORE_HOURS = [
   { days: "Mon–Thu", hours: "10:00am – 10:00pm" },
   { days: "Fri–Sat", hours: "10:00am – 11:00pm" },
