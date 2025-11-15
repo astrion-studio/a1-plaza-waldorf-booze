@@ -16,8 +16,13 @@ const Hero = () => {
               Liquor store in Waldorf with <span className="text-primary">drive-thru</span>, lottery, beer, wine & spirits.
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              A1 Plaza Liquors & Wines offers a drive-thru liquor window, cold beer, wine, tequila, whiskey, vodka, rum, mixers, snacks, tobacco, vape and self-serve lottery machine at 3215 Plaza Way.
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed space-y-4">
+              <span className="block">
+                A1 Plaza Liquors & Wines offers a drive-thru window, cold beer, wine, tequila, whiskey, vodka, rum, mixers, snacks, tobacco, vape and a self-serve lottery machine at 3215 Plaza Way inside Charles County Plaza Shopping Center.
+              </span>
+              <span className="block">
+                You'll also find an on-site bitcoin machine and ATM for quick cash, all run by a woman- and minority-owned small business serving Waldorf for over 25 years.
+              </span>
             </p>
 
           </div>

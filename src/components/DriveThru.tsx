@@ -11,10 +11,10 @@ const DriveThru = () => {
             <span>Exclusive Feature</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Drive-Thru <span className="text-primary">Liquor Window</span>
+            Drive-Thru <span className="text-primary">Window</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Grab cold beer, wine, spirits, mixers, snacks, tobacco and vape without leaving your car. Fast in-and-out for after-work stops and bad weather.
+            Grab cold beer, wine, spirits, mixers, snacks, tobacco and vape without leaving your car. Fast in-and-out for after-work stops and bad weather, right here in Charles County Plaza Shopping Center.
           </p>
         </div>
         

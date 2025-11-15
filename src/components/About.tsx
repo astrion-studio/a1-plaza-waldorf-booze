@@ -4,17 +4,17 @@ const features = [
   {
     icon: Award,
     title: "Quality Selection",
-    description: "Carefully curated products from trusted brands and local favorites"
+    description: "Carefully curated products from trusted brands and local favorites for more than 25 years"
   },
   {
     icon: Users,
     title: "Expert Staff",
-    description: "Knowledgeable team ready to help you find exactly what you need"
+    description: "Knowledgeable team ready to help you find exactly what you need, plus guidance on our bitcoin machine and ATM"
   },
   {
     icon: MapPin,
     title: "Local & Convenient",
-    description: "Proudly serving Waldorf and Southern Maryland communities"
+    description: "Proudly serving Waldorf and Southern Maryland communities from Charles County Plaza Shopping Center"
   }
 ];
 
@@ -25,13 +25,13 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-4xl font-bold">
-              Waldorf's Trusted Liquor Store Since Day One
+              Waldorf's Trusted, Woman-Owned Liquor Store
             </h2>
             <p className="text-lg text-muted-foreground">
-              A1 Plaza Liquors and Wine is your premier destination for quality alcoholic beverages, tobacco, and vape products in Waldorf, Maryland. We pride ourselves on offering an exceptional selection and personalized service that sets us apart from other liquor stores in the area.
+              A1 Plaza Liquors and Wine is a woman- and minority-owned small business that has proudly served Waldorf for more than 25 years. We are your premier destination for quality alcoholic beverages, tobacco, and vape products in Southern Maryland.
             </p>
             <p className="text-lg text-muted-foreground">
-              Whether you're looking for a special bottle of wine, premium spirits, craft beer, or vape supplies, our knowledgeable staff is here to help you find exactly what you need. We're committed to being Waldorf's #1 choice for all your beverage and tobacco needs.
+              Located in the bustling Charles County Plaza Shopping Center, we pair exceptional selection with personalized service and convenient touches like an in-store bitcoin machine and ATM. Whether you're looking for a special bottle of wine, premium spirits, craft beer, or vape supplies, our knowledgeable staff is here to help you find exactly what you need.
             </p>
           </div>
           

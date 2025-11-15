@@ -26,7 +26,7 @@ const Index = () => {
           "@type": "LiquorStore",
           "name": "A1 Plaza Liquors and Wines",
           "image": "https://a1plazaliquors.com/images/store-front.jpg",
-          "description": "A liquor store in Waldorf with a drive-thru liquor window, cold beer, wine, tequila, whiskey, vodka, rum, mixers, snacks, tobacco, vape and lottery. Easy parking at 3215 Plaza Way.",
+          "description": "A woman- and minority-owned liquor store in Waldorf with a drive-thru window, cold beer, wine, tequila, whiskey, vodka, rum, mixers, snacks, tobacco, vape, bitcoin machine, ATM and lottery. Easy parking at 3215 Plaza Way in Charles County Plaza Shopping Center.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "3215 Plaza Way",
@@ -60,6 +60,14 @@ const Index = () => {
             {
               "@type": "LocationFeatureSpecification",
               "name": "Self-serve lottery machine"
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "On-site bitcoin machine"
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "ATM available"
             }
           ],
           "openingHoursSpecification": [

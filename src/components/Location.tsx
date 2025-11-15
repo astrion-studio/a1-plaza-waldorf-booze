@@ -10,7 +10,7 @@ const Location = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Visit Us in Waldorf</h2>
           <p className="text-xl text-muted-foreground">
-            Located at 3215 Plaza Way in a bright shopping center with easy parking
+            Find us inside Charles County Plaza Shopping Center at 3215 Plaza Way with easy parking, a bitcoin machine, and an ATM on site
           </p>
         </div>
         
@@ -23,6 +23,7 @@ const Location = () => {
               <h3 className="text-xl font-bold">Address</h3>
               <p className="text-muted-foreground leading-relaxed">
                 3215 Plaza Way<br />
+                Charles County Plaza Shopping Center<br />
                 Waldorf, MD 20603
               </p>
               <Button variant="outline" size="lg" className="w-full" asChild>
@@ -72,7 +73,7 @@ const Location = () => {
         
         <div className="mt-12 aspect-video max-w-5xl mx-auto rounded-2xl overflow-hidden border">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.8745423!2d-76.9284251!3d38.6120838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7339f8a8e8f8f%3A0x8f8f8f8f8f8f8f8f!2s3215%20Plaza%20Way%2C%20Waldorf%2C%20MD%2020603!5e0!3m2!1sen!2sus!4v1234567890"
+            src="https://www.google.com/maps?q=3215+Plaza+Way,+Waldorf,+MD+20603&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
