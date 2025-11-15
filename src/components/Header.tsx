@@ -1,15 +1,12 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import { Button } from "./ui/button";
-
-const STORE_NAME = "A1 Plaza Liquors & Wines";
-const STORE_ADDRESS = "3215 Plaza Way, Waldorf, MD 20603";
-const PHONE_NUMBER_RAW = "+12406072336";
-const PHONE_NUMBER_DISPLAY = "(240) 607-2336";
-const STORE_HOURS = [
-  { days: "Mon–Thu", hours: "10:00am – 10:00pm" },
-  { days: "Fri–Sat", hours: "10:00am – 11:00pm" },
-  { days: "Sun", hours: "11:00am – 9:00pm" },
-];
+import {
+  PHONE_NUMBER_DISPLAY,
+  PHONE_NUMBER_RAW,
+  STORE_ADDRESS,
+  STORE_HOURS,
+  STORE_NAME,
+} from "../lib/store";
 
 const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   `${STORE_NAME} ${STORE_ADDRESS}`,
