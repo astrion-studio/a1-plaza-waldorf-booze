@@ -65,7 +65,7 @@ const Location = () => {
               <div className="text-sm text-muted-foreground space-y-2 leading-relaxed">
                 <p className="font-medium">Mon–Thu: 10:00am – 10:00pm</p>
                 <p className="font-medium">Fri–Sat: 10:00am – 11:00pm</p>
-                <p className="font-medium">Sunday: 11:00am – 9:00pm</p>
+                <p className="font-medium">Sunday: 10:00am – 9:00pm</p>
               </div>
             </CardContent>
           </Card>
