@@ -2,6 +2,7 @@ import { MapPin, Phone, Clock } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { STORE_PHONE_DISPLAY, STORE_PHONE_URI } from "@/lib/contact";
+import { STORE_HOURS } from "@/lib/store-hours";
 
 const Location = () => {
   return (
@@ -63,9 +64,9 @@ const Location = () => {
               </div>
               <h3 className="text-xl font-bold">Hours</h3>
               <div className="text-sm text-muted-foreground space-y-2 leading-relaxed">
-                <p className="font-medium">Mon–Thu: 10:00am – 10:00pm</p>
-                <p className="font-medium">Fri–Sat: 10:00am – 11:00pm</p>
-                <p className="font-medium">Sunday: 10:00am – 9:00pm</p>
+                {STORE_HOURS.map(({ id, fullLabel, hours }) => (
+                  <p key={id} className="font-medium">{`${fullLabel}: ${hours}`}</p>
+                ))}
               </div>
             </CardContent>
           </Card>
