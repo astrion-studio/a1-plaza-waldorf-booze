@@ -5,6 +5,7 @@ import ProductCategories from "@/components/ProductCategories";
 import About from "@/components/About";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
+import { STORE_HOURS } from "@/lib/store-hours";
 
 const Index = () => {
   return (
@@ -70,26 +71,12 @@ const Index = () => {
               "name": "ATM available"
             }
           ],
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-              "opens": "10:00",
-              "closes": "22:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Friday", "Saturday"],
-              "opens": "10:00",
-              "closes": "23:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Sunday",
-              "opens": "10:00",
-              "closes": "21:00"
-            }
-          ],
+          "openingHoursSpecification": STORE_HOURS.map(({ dayOfWeek, opens, closes }) => ({
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek,
+            opens,
+            closes
+          })),
           "servesCuisine": "Beverages",
           "areaServed": {
             "@type": "City",

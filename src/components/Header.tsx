@@ -1,15 +1,10 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { STORE_PHONE_DISPLAY, STORE_PHONE_URI } from "@/lib/contact";
+import { STORE_HOURS } from "@/lib/store-hours";
 
 const STORE_NAME = "A1 Plaza Liquors & Wines";
 const STORE_ADDRESS = "3215 Plaza Way, Waldorf, MD 20603";
-const STORE_HOURS = [
-  { days: "Mon–Thu", hours: "10:00am – 10:00pm" },
-  { days: "Fri–Sat", hours: "10:00am – 11:00pm" },
-  { days: "Sun", hours: "11:00am – 9:00pm" },
-];
-
 const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   `${STORE_NAME} ${STORE_ADDRESS}`,
 )}`;
@@ -75,8 +70,8 @@ const Header = () => {
             <span className="font-medium">Store Hours</span>
           </div>
           <div className="space-y-0.5 leading-tight md:space-y-0">
-            {STORE_HOURS.map(({ days, hours }) => (
-              <p key={days}>{`${days} ${hours}`}</p>
+            {STORE_HOURS.map(({ id, shortLabel, hours }) => (
+              <p key={id}>{`${shortLabel} ${hours}`}</p>
             ))}
           </div>
         </div>
