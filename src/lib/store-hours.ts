@@ -3,7 +3,7 @@ export type StoreHoursEntry = {
   shortLabel: string;
   fullLabel: string;
   hours: string;
-  dayOfWeek: string[];
+  dayOfWeek: string | string[];
   opens: string;
   closes: string;
 };
